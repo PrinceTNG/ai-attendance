@@ -1,0 +1,32 @@
+{
+  "name": "ai-attendance-server",
+  "version": "1.0.0",
+  "description": "Backend server for AI Attendance System",
+  "author": "Prince Mthethwa",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "setup-db": "node scripts/setup-database.js",
+    "setup-admin": "node scripts/setup-admin.js",
+    "fix-admin": "node scripts/fix-admin.js",
+    "export-db": "node scripts/export-database.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.6.5",
+    "pdfkit": "^0.14.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
