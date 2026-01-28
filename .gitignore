@@ -21,4 +21,8 @@ dist-ssr
 *.sln
 *.sw?
 .env
+.env.local
+.env.production
+server/.env
+server/node_modules
 .vercel
