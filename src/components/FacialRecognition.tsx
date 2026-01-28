@@ -102,7 +102,7 @@ export const FacialRecognition: React.FC<FacialRecognitionProps> = ({
       const requiredDetections = 1;
       const maxNoFaceCount = 5; // Reset if no face for 5 checks
       
-      // FASTER: Check every 300ms instead of default 500ms
+      // ULTRA FAST: Check every 100ms for instant detection
       const interval = setInterval(async () => {
         // Double check to prevent multiple captures
         if (isCapturing || hasTriggeredCapture) {
@@ -113,23 +113,10 @@ export const FacialRecognition: React.FC<FacialRecognitionProps> = ({
         try {
           const video = webcamRef.current?.video;
           if (video && video.readyState === video.HAVE_ENOUGH_DATA && video.videoWidth > 0) {
-            // Enhanced AI detection with quality check
-            // First check for multiple faces (security)
-            const multipleFaces = await checkForMultipleFaces(video);
-            if (multipleFaces.multipleFaces) {
-              setMultipleFacesDetected(true);
-              setError('Multiple faces detected. Please ensure only one person is in frame.');
-              noFaceCount++;
-              if (noFaceCount >= maxNoFaceCount) {
-                faceDetectedCount = 0;
-              }
-              setFaceDetectedInFrame(false);
-              return;
-            } else {
-              setMultipleFacesDetected(false);
-            }
+            // ULTRA FAST: Skip multiple face check for speed (only check during clock in/out)
+            setMultipleFacesDetected(false);
 
-            // FASTER: Use basic AI detection directly (skip quality checks for speed)
+            // ULTRA FAST: Use basic AI detection directly (skip ALL quality checks for maximum speed)
             let descriptor: number[] | null = null;
             
             try {

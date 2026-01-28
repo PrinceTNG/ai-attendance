@@ -42,7 +42,7 @@ git commit -m "Initial commit - AI Attendance System"
 
 # Create repo on GitHub (go to github.com/new)
 # Then link and push:
-git remote add origin https://github.com/YOUR_USERNAME/ai-attendance.git
+git remote add origin https://github.com/PrinceTNG/ai-attendance.git
 git branch -M main
 git push -u origin main
 ```
