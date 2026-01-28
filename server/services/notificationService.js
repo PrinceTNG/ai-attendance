@@ -17,7 +17,7 @@ const createNotification = async (userId, title, message, type = 'info', actionU
 const notifyAdmin = async (title, message, type = 'info') => {
   try {
     // Get admin user ID
-    const admin = await query('SELECT id FROM users WHERE role = "admin" LIMIT 1');
+    const admin = await query('SELECT id FROM users WHERE role = \'admin\' LIMIT 1');
     if (admin.length > 0) {
       await createNotification(admin[0].id, title, message, type);
     }

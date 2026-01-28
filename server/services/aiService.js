@@ -249,7 +249,7 @@ const processLatenessReport = async (userId, reason) => {
 // Get admin analytics
 const getAdminAnalytics = async () => {
   try {
-    const totalUsers = await queryOne('SELECT COUNT(*) as count FROM users WHERE status = "active"');
+    const totalUsers = await queryOne('SELECT COUNT(*) as count FROM users WHERE status = \'active\'');
     const today = new Date().toISOString().split('T')[0];
     const presentToday = await queryOne(
       `SELECT COUNT(DISTINCT user_id) as count FROM attendance WHERE DATE(clock_in) = ? AND status IN ('present', 'overtime')`,

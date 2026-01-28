@@ -194,7 +194,7 @@ const loginWithFace = async (req, res) => {
 
     // Get all users with facial descriptors
     const users = await query(
-      'SELECT id, email, name, role, status, facial_descriptors FROM users WHERE facial_descriptors IS NOT NULL AND status = "active"'
+      'SELECT id, email, name, role, status, facial_descriptors FROM users WHERE facial_descriptors IS NOT NULL AND status = \'active\''
     );
 
     let bestMatch = null;

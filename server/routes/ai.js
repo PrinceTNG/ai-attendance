@@ -235,7 +235,7 @@ router.get('/dashboard-stats', async (req, res) => {
     
     // Get various stats
     const [totalUsers, presentToday, lateToday, monthlyAttendance] = await Promise.all([
-      queryOne('SELECT COUNT(*) as count FROM users WHERE status = "active"'),
+      queryOne('SELECT COUNT(*) as count FROM users WHERE status = \'active\''),
       queryOne('SELECT COUNT(DISTINCT user_id) as count FROM attendance WHERE DATE(clock_in) = ? AND status IN ("present", "overtime")', [today]),
       queryOne('SELECT COUNT(DISTINCT user_id) as count FROM attendance WHERE DATE(clock_in) = ? AND status = "late"', [today]),
       query('SELECT * FROM attendance WHERE clock_in >= ? ORDER BY clock_in DESC', [thirtyDaysAgo])
