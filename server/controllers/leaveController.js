@@ -312,7 +312,7 @@ const cancelLeaveRequest = async (req, res) => {
 
     // Update request
     await query(
-      'UPDATE leave_requests SET status = "cancelled" WHERE id = ?',
+      'UPDATE leave_requests SET status = \'cancelled\' WHERE id = ?',
       [id]
     );
 
