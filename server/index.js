@@ -96,6 +96,19 @@ const startServer = async () => {
       console.log(`🚀 Server running on http://localhost:${PORT}`);
       console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
       console.log(`🔗 CORS enabled for: ${process.env.CORS_ORIGIN || 'http://localhost:5173'}`);
+      
+      // Keep-alive: Ping database every 20 minutes to prevent Aiven auto-sleep
+      if (process.env.NODE_ENV === 'production') {
+        console.log('🔄 Database keep-alive enabled (pings every 20 minutes)');
+        setInterval(async () => {
+          try {
+            await testConnection();
+            console.log('✅ Database keep-alive ping successful');
+          } catch (error) {
+            console.warn('⚠️ Database keep-alive ping failed:', error.message);
+          }
+        }, 20 * 60 * 1000); // 20 minutes
+      }
     });
   } catch (error) {
     console.error('Failed to start server:', error);
