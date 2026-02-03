@@ -2,17 +2,58 @@
 
 # 🤖 AI-Powered Smart Attendance System
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=for-the-badge&logo=vercel)](https://ai-attendance-five.vercel.app/)
-[![React](https://img.shields.io/badge/React-18.0-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-007ACC?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-20.0-43853D?style=for-the-badge&logo=node.js)](https://nodejs.org/)
+[![Live Demo](https://img.shields.io/badge/🚀_Live-Demo-success?style=for-the-badge&logo=vercel&logoColor=white)](https://ai-attendance-five.vercel.app/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/PrinceTNG/ai-attendance)
+[![Stars](https://img.shields.io/github/stars/PrinceTNG/ai-attendance?style=for-the-badge&logo=github)](https://github.com/PrinceTNG/ai-attendance/stargazers)
+
+[![React](https://img.shields.io/badge/React-18.0-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-20.0-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
-[![TensorFlow.js](https://img.shields.io/badge/TensorFlow.js-AI-FF6F00?style=for-the-badge&logo=tensorflow)](https://www.tensorflow.org/js)
-[![License](https://img.shields.io/badge/License-Private-red?style=for-the-badge)](LICENSE)
+[![TensorFlow.js](https://img.shields.io/badge/TensorFlow-AI_Powered-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/js)
 
-*A comprehensive AI-powered attendance management system featuring facial recognition, real-time tracking, intelligent analytics, and conversational AI assistance.*
+**A comprehensive AI-powered attendance management system with facial recognition, real-time tracking, intelligent analytics, and conversational AI assistance.**
 
-[🚀 Live Demo](https://ai-attendance-five.vercel.app/) • [📖 Documentation](#-quick-start) • [🎯 Features](#-key-features) • [📧 Contact](mailto:mthethwaprince10@gmail.com)
+### 🎯 Perfect for: Organizations • Educational Institutions • Remote Teams
+
+[🚀 Try Live Demo](https://ai-attendance-five.vercel.app/) • [📖 Read Docs](#-table-of-contents) • [⭐ Star this repo](https://github.com/PrinceTNG/ai-attendance) • [📧 Contact](mailto:mthethwaprince10@gmail.com)
+
+</div>
+
+---
+
+## 📋 Table of Contents
+
+- [✨ Key Features](#-key-features)
+- [🎬 Demo & Screenshots](#-demo--screenshots)
+- [🛠️ Technology Stack](#️-technology-stack)
+- [🚀 Quick Start](#-quick-start)
+- [📁 Project Structure](#-project-structure)
+- [🔐 User Roles](#-user-roles)
+- [🤖 AI Features Setup](#-ai-features-setup-optional)
+- [📊 Database Schema](#-database-schema)
+- [🧪 Available Scripts](#-available-scripts)
+- [🐛 Troubleshooting](#-troubleshooting)
+- [🌐 Deployment](#-deployment)
+- [📝 Environment Variables](#-environment-variables)
+- [🔒 Security Features](#-security-features)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [📞 Contact](#-contact)
+
+---
+
+## 🎬 Demo & Screenshots
+
+<div align="center">
+
+### 🌐 [**View Live Application →**](https://ai-attendance-five.vercel.app/)
+
+| Dashboard | Facial Recognition | Analytics |
+|:---------:|:------------------:|:---------:|
+| ![Dashboard](https://via.placeholder.com/300x200/4A90E2/FFFFFF?text=Admin+Dashboard) | ![Face Recognition](https://via.placeholder.com/300x200/43853D/FFFFFF?text=Face+Recognition) | ![Analytics](https://via.placeholder.com/300x200/FF6F00/FFFFFF?text=Analytics+%26+Reports) |
+
+> 💡 **Tip:** Screenshots will be added soon. Visit the [live demo](https://ai-attendance-five.vercel.app/) to see the app in action!
 
 </div>
 
@@ -365,22 +406,48 @@ Full-stack developer specializing in AI-powered web applications.
 
 ---
 
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/PrinceTNG/ai-attendance/issues).
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is private and proprietary. All rights reserved © 2025 Prince Mthethwa.
+
+For licensing inquiries, please contact: mthethwaprince10@gmail.com
+
+---
+
+## 📞 Contact
+
 <div align="center">
 
-## 🌟 Star this repository if you find it helpful!
+### Prince Mthethwa
+**Computer Systems Engineer | Full Stack Developer**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/prince-mthethwa-454b95316/)
+[![Email](https://img.shields.io/badge/Email-Get_in_Touch-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mthethwaprince10@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-View_Projects-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://your-portfolio-url.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PrinceTNG)
+
+**📍 Johannesburg, South Africa | 📱 +27 79 531 3990**
+
+---
+
+### ⭐ Star this repository if you found it helpful!
 
 [![GitHub stars](https://img.shields.io/github/stars/PrinceTNG/ai-attendance?style=social)](https://github.com/PrinceTNG/ai-attendance/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/PrinceTNG/ai-attendance?style=social)](https://github.com/PrinceTNG/ai-attendance/network/members)
 [![GitHub watchers](https://img.shields.io/github/watchers/PrinceTNG/ai-attendance?style=social)](https://github.com/PrinceTNG/ai-attendance/watchers)
 
----
-
-### 📬 Get in Touch
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/prince-mthethwa-454b95316/)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail)](mailto:mthethwaprince10@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-000000?style=for-the-badge&logo=vercel)](https://your-portfolio-url.vercel.app)
-
-*Developed by Prince Mthethwa* | Computer Systems Engineer
+**Made with 💻 and ☕ by Prince Mthethwa**
 
 </div>
