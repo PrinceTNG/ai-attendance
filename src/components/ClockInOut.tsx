@@ -275,7 +275,7 @@ export const ClockInOut: React.FC<ClockInOutProps> = ({ onStatusChange }) => {
                 toast.success(`✅ ${response.message || 'Successfully clocked out! Have a great day.'} (AI Verified: ${matchSimilarity ? (matchSimilarity * 100).toFixed(1) : 'N/A'}% match)`);
                 if (onStatusChange) onStatusChange();
               } else {
-                const errorMsg = response?.message || response?.error || 'Failed to clock out. Please try again.';
+                const errorMsg = response?.message || (response as any)?.error || 'Failed to clock out. Please try again.';
                 console.error('❌ Clock out failed:', errorMsg);
                 toast.error(errorMsg);
               }
@@ -291,7 +291,7 @@ export const ClockInOut: React.FC<ClockInOutProps> = ({ onStatusChange }) => {
                 toast.success(`✅ ${response.message || 'Successfully clocked in! Welcome to Initium Venture Solution.'} (AI Verified: ${matchSimilarity ? (matchSimilarity * 100).toFixed(1) : 'N/A'}% match)`);
                 if (onStatusChange) onStatusChange();
               } else {
-                const errorMsg = response?.message || response?.error || 'Failed to clock in. Please try again.';
+                const errorMsg = response?.message || (response as any)?.error || 'Failed to clock in. Please try again.';
                 console.error('❌ Clock in failed:', errorMsg);
                 toast.error(errorMsg);
               }
@@ -327,7 +327,7 @@ export const ClockInOut: React.FC<ClockInOutProps> = ({ onStatusChange }) => {
               toast.success(`✅ ${response.message || 'Successfully clocked out! Have a great day.'} (AI Verified: ${matchSimilarity ? (matchSimilarity * 100).toFixed(1) : 'N/A'}% match)`);
               if (onStatusChange) onStatusChange();
             } else {
-              const errorMsg = response?.message || response?.error || 'Failed to clock out. Please try again.';
+              const errorMsg = response?.message || (response as any)?.error || 'Failed to clock out. Please try again.';
               console.error('❌ Clock out failed:', errorMsg);
               toast.error(errorMsg);
             }
@@ -354,7 +354,7 @@ export const ClockInOut: React.FC<ClockInOutProps> = ({ onStatusChange }) => {
               toast.success(`✅ ${response.message || 'Successfully clocked in! Welcome to Initium Venture Solution.'} (AI Verified: ${matchSimilarity ? (matchSimilarity * 100).toFixed(1) : 'N/A'}% match)`);
               if (onStatusChange) onStatusChange();
             } else {
-              const errorMsg = response?.message || response?.error || 'Failed to clock in. Please try again.';
+              const errorMsg = response?.message || (response as any)?.error || 'Failed to clock in. Please try again.';
               console.error('❌ Clock in failed:', errorMsg);
               toast.error(errorMsg);
             }

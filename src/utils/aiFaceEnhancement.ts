@@ -328,7 +328,7 @@ export const detectFaceWithQualityCheck = async (
     }
 
     // Extract descriptor
-    const descriptor = Array.from(detection.descriptor);
+    const descriptor = Array.from(detection.descriptor) as number[];
     
     if (!descriptor || descriptor.length !== 128) {
       return null;

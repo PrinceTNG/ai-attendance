@@ -92,7 +92,8 @@ export const AIChatbot: React.FC<AIChatbotProps> = ({ onClose }) => {
     
     // Add to conversation memory
     if (user?.id) {
-      conversationMemory.addMessage(user.id, type, content);
+      // Convert 'bot' to 'assistant' for conversation memory
+      conversationMemory.addMessage(user.id, type === 'bot' ? 'assistant' : type, content);
     }
   };
 

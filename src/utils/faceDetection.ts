@@ -95,17 +95,17 @@ export const detectFaceWithAI = async (
     if (detection) {
       console.log('✅ Face detected, extracting descriptor...');
       // Extract the face descriptor (128 numbers representing the face)
-      const descriptor = Array.from(detection.descriptor);
+      const descriptor = Array.from(detection.descriptor) as number[];
       
       // Verify descriptor quality
-      if (descriptor.length === 128 && descriptor.every(val => !isNaN(val) && isFinite(val))) {
+      if (descriptor.length === 128 && descriptor.every((val: number) => !isNaN(val) && isFinite(val))) {
         console.log('✅ Valid descriptor extracted (128 dimensions)');
         return descriptor;
       } else {
         console.error('❌ Invalid descriptor:', {
           length: descriptor.length,
-          hasNaN: descriptor.some(val => isNaN(val)),
-          hasInfinite: descriptor.some(val => !isFinite(val))
+          hasNaN: descriptor.some((val: number) => isNaN(val)),
+          hasInfinite: descriptor.some((val: number) => !isFinite(val))
         });
         return null;
       }
@@ -244,7 +244,7 @@ export const detectFaceWithConfidence = async (
       .withFaceDescriptor();
 
     if (detection) {
-      const descriptor = Array.from(detection.descriptor);
+      const descriptor = Array.from(detection.descriptor) as number[];
       const confidence = detection.detection.score || 0.5;
       
       if (descriptor.length === 128 && confidence >= minConfidence) {

@@ -103,11 +103,11 @@ export const AISmartNotifications: React.FC = () => {
       };
     }).sort((a, b) => {
       // Sort by priority and read status
-      const priorityOrder = { high: 3, medium: 2, low: 1 };
+      const priorityOrder: { [key: string]: number } = { high: 3, medium: 2, low: 1 };
       if (a.is_read !== b.is_read) {
         return a.is_read ? 1 : -1; // Unread first
       }
-      return priorityOrder[b.priority] - priorityOrder[a.priority];
+      return (priorityOrder[b.priority] || 0) - (priorityOrder[a.priority] || 0);
     });
   };
 

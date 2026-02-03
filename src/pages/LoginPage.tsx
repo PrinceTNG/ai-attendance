@@ -30,7 +30,7 @@ export const LoginPage: React.FC = () => {
         console.log('✅ Login successful:', result.user);
         toast.success(`✅ ${result.message || 'Login successful!'}`);
         setTimeout(() => {
-          navigate(`/${result.user.role}`);
+          navigate(`/${result.user?.role}`);
         }, 500);
       } else {
         console.error('❌ Login failed:', result.message);
@@ -60,7 +60,7 @@ export const LoginPage: React.FC = () => {
       if (result.success && result.user) {
         toast.success(`✅ ${result.message || 'Facial recognition successful!'}`);
         setTimeout(() => {
-          navigate(`/${result.user.role}`);
+          navigate(`/${result.user?.role}`);
         }, 500);
       } else {
         const errorMsg = result.message || 'Face not recognized';

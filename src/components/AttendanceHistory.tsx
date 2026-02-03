@@ -161,7 +161,7 @@ export const AttendanceHistory: React.FC = () => {
         </div>
         <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg sm:rounded-xl p-3 sm:p-4">
           <div className="text-blue-400 text-xs sm:text-sm font-medium">Total Hours</div>
-          <div className="text-xl sm:text-2xl font-bold text-white">{parseFloat(stats.total_hours || 0).toFixed(1)}</div>
+          <div className="text-xl sm:text-2xl font-bold text-white">{parseFloat(String(stats.total_hours || 0)).toFixed(1)}</div>
         </div>
         <div className="bg-red-500/10 border border-red-500/30 rounded-lg sm:rounded-xl p-3 sm:p-4">
           <div className="text-red-400 text-xs sm:text-sm font-medium">Absent Days</div>

@@ -126,7 +126,7 @@ export const ReportsSection: React.FC = () => {
         toast.success('Report generated successfully!');
         
         // Download the file using authenticated fetch
-        const filename = response.filename || response.filePath?.split(/[/\\]/).pop();
+        const filename = (response as any).filename || response.filePath?.split(/[/\\]/).pop();
         if (filename) {
           await handleDownloadReport(filename);
         }
@@ -341,7 +341,7 @@ export const ReportsSection: React.FC = () => {
                     </div>
                     <div>
                       <p className="text-white font-medium">
-                        {report.type.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                        {report.type.replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())}
                       </p>
                       <p className="text-sm text-gray-400">
                         {reportDate} • {new Date(report.period_start).toLocaleDateString()} to {new Date(report.period_end).toLocaleDateString()}

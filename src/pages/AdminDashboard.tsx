@@ -26,17 +26,26 @@ import { ScheduleManagement } from '../components/ScheduleManagement';
 import { usersAPI, attendanceAPI, reportsAPI } from '../services/api';
 import { toast } from 'react-toastify';
 
+interface StatItem {
+  title: string;
+  value: string;
+  change: string;
+  trend: 'up' | 'down';
+  icon: React.ReactNode;
+  color: 'blue' | 'green' | 'purple' | 'orange';
+}
+
 export const AdminDashboard: React.FC = () => {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState('overview');
-  const [stats, setStats] = useState([
+  const [stats, setStats] = useState<StatItem[]>([
     {
       title: "Total Users",
       value: "248",
       change: "+12%",
       trend: "up" as const,
       icon: <Users className="w-6 h-6" />,
-      color: "blue"
+      color: "blue" as const
     },
     {
       title: "Present Today",
@@ -44,7 +53,7 @@ export const AdminDashboard: React.FC = () => {
       change: "+5%",
       trend: "up" as const,
       icon: <UserCheck className="w-6 h-6" />,
-      color: "green"
+      color: "green" as const
     },
     {
       title: "Avg. Hours/Day",
@@ -52,7 +61,7 @@ export const AdminDashboard: React.FC = () => {
       change: "+0.3h",
       trend: "up" as const,
       icon: <Clock className="w-6 h-6" />,
-      color: "purple"
+      color: "purple" as const
     },
     {
       title: "Late Arrivals",
@@ -60,7 +69,7 @@ export const AdminDashboard: React.FC = () => {
       change: "0%",
       trend: "down" as const,
       icon: <AlertCircle className="w-6 h-6" />,
-      color: "orange"
+      color: "orange" as const
     }
   ]);
 
@@ -105,7 +114,7 @@ export const AdminDashboard: React.FC = () => {
           change: `${activeUsers} active`,
           trend: "up" as const,
           icon: <Users className="w-6 h-6" />,
-          color: "blue"
+          color: "blue" as const
         },
         {
           title: "Present Today",
@@ -113,7 +122,7 @@ export const AdminDashboard: React.FC = () => {
           change: `${presentPercentage}%`,
           trend: "up" as const,
           icon: <UserCheck className="w-6 h-6" />,
-          color: "green"
+          color: "green" as const
         },
         {
           title: "Avg. Hours/Day",
@@ -121,7 +130,7 @@ export const AdminDashboard: React.FC = () => {
           change: "Today",
           trend: "up" as const,
           icon: <Clock className="w-6 h-6" />,
-          color: "purple"
+          color: "purple" as const
         },
         {
           title: "Late Arrivals",
@@ -129,7 +138,7 @@ export const AdminDashboard: React.FC = () => {
           change: presentToday > 0 ? `${Math.round((lateToday / presentToday) * 100)}%` : "0%",
           trend: lateToday > 0 ? "up" as const : "down" as const,
           icon: <AlertCircle className="w-6 h-6" />,
-          color: "orange"
+          color: "orange" as const
         }
       ]);
     } catch (error) {

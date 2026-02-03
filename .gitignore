@@ -1,3 +1,20 @@
+# Dependencies
+node_modules
+server/node_modules
+
+# Build outputs
+dist
+dist-ssr
+build
+*.local
+
+# Environment files
+.env
+.env.local
+.env.production
+server/.env
+
+# Logs
 logs
 *.log
 npm-debug.log*
@@ -6,23 +23,34 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Generated reports (exclude from git)
+server/reports/*.pdf
+server/reports/*.csv
 
+# Temporary documentation files
+*_APPLIED.md
+*_FIX*.md
+*_GUIDE.md
+*_SUMMARY.md
+*_CHECKLIST.md
+*_OPTIONS.md
+DEPLOY_*.md
+*.sql.backup
+*_backup.sql
+
+# IDEs and editors
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-.env
-.env.local
-.env.production
-server/.env
-server/node_modules
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Deployment
 .vercel

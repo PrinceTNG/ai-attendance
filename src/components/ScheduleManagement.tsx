@@ -103,7 +103,7 @@ export const ScheduleManagement: React.FC = () => {
         });
         await fetchSchedules();
       } else {
-        toast.error(response.error || 'Failed to add schedule entry');
+        toast.error((response as any).error || 'Failed to add schedule entry');
       }
     } catch (error: any) {
       console.error('Create schedule error:', error);
