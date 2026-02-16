@@ -216,15 +216,21 @@ export const LoginPage: React.FC = () => {
             </p>
           </div>
 
-          {/* By Prince */}
+          {/* By Prince - Admin login credentials */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
             className="mt-4 sm:mt-6 p-3 sm:p-4 bg-blue-500/10 border border-blue-400/20 rounded-lg sm:rounded-xl"
           >
-            <p className="text-xs text-blue-300 font-medium mb-2">By Prince:</p>
-            
+            <p className="text-xs text-blue-300 font-medium mb-2">By Prince</p>
+            <p className="text-xs text-gray-400 mb-1">Admin login (demo):</p>
+            <p className="text-xs text-gray-300 font-mono">
+              Email: admin@initiumventures.com
+            </p>
+            <p className="text-xs text-gray-300 font-mono">
+              Password: admin123
+            </p>
           </motion.div>
         </motion.div>
       </motion.div>
